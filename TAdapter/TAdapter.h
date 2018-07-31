@@ -63,14 +63,14 @@ static inline TXAdapterPhoneType tCurrentType() {
 
 /*真实字体大小*/
 static inline CGFloat tRealFontSize(CGFloat defaultSize) {
-    if ([TXAdapter shareAdapter].defaultType == tCurrentType())
+    if ([TAdapter shareAdapter].defaultType == tCurrentType())
         return defaultSize;
-    return tScreenWidth() / [TXAdapter shareAdapter].defaultScreenWidth * defaultSize;
+    return tScreenWidth() / [TAdapter shareAdapter].defaultScreenWidth * defaultSize;
 }
 
 /*真实长度*/
 static inline CGFloat tRealLength(CGFloat defaultLength) {
-    if ([TXAdapter shareAdapter].defaultType == tCurrentType())
+    if ([TAdapter shareAdapter].defaultType == tCurrentType())
         return defaultLength;
-    return tScreenWidth()/[TXAdapter shareAdapter].defaultScreenWidth * defaultLength;
+    return tScreenWidth()/[TAdapter shareAdapter].defaultScreenWidth * defaultLength;
 }
